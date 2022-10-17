@@ -3,8 +3,8 @@
     <main v-show="question" class="Question">
       <div class="Question__center">
         <h3>
-          아래 자극의 <span style="font-weight: bolder">색상</span>이 가벼운가요
-          무거운가요?
+          아래 자극의 <span style="font-weight: bolder">'색상'</span>이
+          가벼운가요 무거운가요?
         </h3>
         <img :src="`/deepColor/answer/${num}.png`" class="Question__img" />
         <section class="selectSection">
