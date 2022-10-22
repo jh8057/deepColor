@@ -46,7 +46,8 @@
 </template>
 
 <script lang="ts">
-export default {
+import { defineComponent, computed } from "vue";
+export default defineComponent({
   props: {
     result1: { type: Array as any, default: [] },
     result2: { type: Array as any, default: [] },
@@ -60,7 +61,7 @@ export default {
       return correctAnswer || "";
     },
   },
-};
+});
 </script>
 
 <style>
