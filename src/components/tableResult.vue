@@ -20,7 +20,7 @@
       </table>
     </div>
     <div class="tableFlex__item">
-      <h3>인출</h3>
+      <h3>인출 | 정답수 : {{ answerCnt }}</h3>
       <table class="tableData">
         <thead>
           <tr>
@@ -46,10 +46,20 @@
 </template>
 
 <script lang="ts">
+import type { finalResultTwo } from "../types/types";
 export default {
   props: {
     result1: { type: Array as any, default: [] },
     result2: { type: Array as any, default: [] },
+  },
+  computed: {
+    answerCnt() {
+      let correctAnswer = 0;
+      this.result2.forEach((el: finalResultTwo) => {
+        if (el.answer === el.selected) correctAnswer++;
+      });
+      return correctAnswer;
+    },
   },
 };
 </script>
