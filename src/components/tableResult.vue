@@ -46,7 +46,6 @@
 </template>
 
 <script lang="ts">
-import type { finalResultTwo } from "../types/types";
 export default {
   props: {
     result1: { type: Array as any, default: [] },
@@ -55,7 +54,7 @@ export default {
   computed: {
     answerCnt() {
       let correctAnswer = 0;
-      this.result2.forEach((el: finalResultTwo) => {
+      this.result2.forEach((el: any) => {
         if (el.answer === el.selected) correctAnswer++;
       });
       return correctAnswer;
