@@ -57,7 +57,7 @@ export default {
       this.result2.forEach((el: any) => {
         if (el.answer === el.selected) correctAnswer++;
       });
-      return correctAnswer;
+      return correctAnswer || "";
     },
   },
 };
